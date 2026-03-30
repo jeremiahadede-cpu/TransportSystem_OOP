@@ -19,4 +19,9 @@ public class Ticket {
         System.out.println("Total Fare: " + totalFare);
         System.out.println("------------------");
     }
+
+    public String toFileString() {
+        double totalFare = vehicle.calculateFare(distance);
+        return passengerName + "," + vehicle.getTransportID() + "," + distance + "," + totalFare;
+    }
 }
